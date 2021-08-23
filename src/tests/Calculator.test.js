@@ -132,23 +132,29 @@ describe('Calculator', () => {
   // calculator.clearClick() - clear the running total without affecting the calculation
 
   it('should be able to clear running total without affecting the calculation  ', () => {
-    const button3 = container.find('#number3');
-    button3.simulate('click');
+    const button5 = container.find('#number5');
+    button5.simulate('click');
 
-    const buttonMultiply = container.find('#operator-multiply');
-    buttonMultiply.simulate('click');
+    const buttonAdd = container.find('#operator-add');
+    buttonAdd.simulate('click');
 
-    const button2 = container.find('#number2');
-    button2.simulate('click');
+    const button8 = container.find('#number8');
+    button8.simulate('click');
 
     const buttonClear = container.find('#clear');
     buttonClear.simulate('click');
 
-    const button4 = container.find('#number4');
-    button4.simulate('click');
+    const buttonAdd = container.find('#operator-add');
+    buttonAdd.simulate('click');
+
+    const button2 = container.find('#number2');
+    button2.simulate('click');
+
+    const buttonEquals = container.find('#operator-equals');
+    buttonEquals.simulate('click');
 
     const runningTotal = container.find('#running-total');
-    expect(runningTotal.text()).toEqual('4');
+    expect(runningTotal.text()).toEqual('7');
 
   });
 
